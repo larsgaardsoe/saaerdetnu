@@ -604,7 +604,7 @@ video {
   
   #yes + label {
     display: block;
-    border: 3px solid #333;
+    border: 3px solid #fff;
     width: var(--d);
     height: var(--d);
     border-radius: 4px;
@@ -620,7 +620,7 @@ video {
   }
   #yes + label svg path {
     fill: none;
-    stroke: #333;
+    stroke: #fff;
     stroke-width: 4px;
     stroke-linecap: round;
     stroke-linejoin: round;
