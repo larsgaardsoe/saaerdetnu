@@ -285,7 +285,7 @@ textarea:focus {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
-    background-color: transparent !important;
+    background-color_: transparent !important;
     padding: .5rem 0;
     box-sizing: border-box;
     height: auto !important
@@ -448,13 +448,30 @@ button:hover {
     box-shadow: 0 5px 30px rgba(0, 0, 0, .15)
 }
 
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
 .front {
     padding: 40px 20vw;
+    position: relative;
+    color: #fff;
+}
+
+.front__question {
+    color: #fff;
 }
 
 .front__input {
     margin-bottom: 10px;
     font-size: 2em;
+    background-color: #fff;
+    padding: 20px 20px;
 }
 
 .front__confirm {
@@ -485,13 +502,18 @@ button:hover {
     right: 0;
     height: 0;
     overflow: hidden;
-    background-image: linear-gradient(-180deg, #92BCBC 0%, #B7DBDB 100%);
+    background-image_: linear-gradient(-180deg, #92BCBC 0%, #B7DBDB 100%);
+    color: rgb(253, 238, 238);
     color: #fff;
     padding: 40px 20vw;
     opacity: 0;
     transition: opacity 1s;
     display: flex;
     align-items: center;
+}
+
+.back p {
+    color: #fff;
 }
 
 .back.isShown {

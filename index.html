@@ -11,7 +11,11 @@
 </head>
 
 <body>
+    <video playsinline muted poster_=".jpg" id="bgvid">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
   <div class="front" id="front">
+      
     <h1 class="front__question">Hvor meget kan vi have holdt temperaturen nede i din del af landet, når du fylder 90
       år?</h1>
 
@@ -149,6 +153,8 @@
       var shareLink = document.querySelector('#share-link')
       // shareLink.href = "https://www.facebook.com/share.php?u=saaerdetnu.dk&quote=" + temptext
       var back = document.querySelector('#back');
+      var front = document.querySelector('#front');
+      front.style.display = "none";
       back.classList = "back isShown";
       var year90 = parseInt(submissionForm['byear'].value) + 90;
       var personalDiff = years[year90].diff;
@@ -156,9 +162,11 @@
       var year90El = document.querySelector("#year90");
       var badDiffEl = document.querySelector("#badDiff");
       var zipcodeEl = document.querySelector("#your-zipcode");
+      var vidEl = document.querySelector("#bgvid");
       diffEl.innerText = personalDiff;
       year90El.innerText = year90;
       badDiffEl.innerText = years[year90].badDiff;
+      vidEl.play();
        
     }
 
